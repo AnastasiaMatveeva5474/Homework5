@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <main class="calc">
+        <h1>Калькулятор стоимости заказа</h1>
+
+        <form id="calc-form" novalidate>
+            <div class="field">
+                <label for="product">Товар</label>
+                <select id="product" name="product">
+                    <option value="1200">Кофе в зёрнах, 1 кг — 1200 ₽</option>
+                    <option value="450">Чай листовой, 200 г — 450 ₽</option>
+                    <option value="180">Печенье овсяное, 300 г — 180 ₽</option>
+                    <option value="2500">Кофемолка ручная — 2500 ₽</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="quantity">Количество, шт.</label>
+                <input
+                    type="text"
+                    id="quantity"
+                    name="quantity"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    placeholder="Например, 3"
+                >
+            </div>
+
+            <button type="button" id="calc-button">Посчитать стоимость</button>
+        </form>
+
+        <p id="error" class="error" role="alert"></p>
+        <p id="result" class="result" aria-live="polite"></p>
+    </main>
+</body>
+</html>
